@@ -78,3 +78,26 @@ Eclipse pronto para uso.
 
 ## Instalando o Maven
 
+Faça o download do [Maven](https://maven.apache.org/download.cgi), aqui usarei a versão <strong>apache-maven-3.3.9</strong>.
+
+Após fazer o download do Maven, pelo <strong>Terminal</strong> acesse o diretório onde ele foi baixado, geralmente é a pasta 'Downloads'.
+
+1. Extraia o  arquivo
+
+```shell
+$ tar -zxvf apache-maven-3.3.9-bin.tar.gz
+```
+
+2. Mover o Maven de diretório 
+
+Depois de extraído o maven, ele deve ser movido de diretório para um diretório mais apropriado, do que o diretório de Download. Para isso, escolha odiretório destino e mova o diretório do Maven com o comando.
+
+```shell
+$ mv apache-maven -3.3.9/ /opt/maven/
+```
+
+3. Configurar a variável de ambiente <strong>PATH</strong>.
+
+Depois de movido de diretório, teremos que configurar a variaável de ambiente  PATH do sistema para que, ao digitar o comando Maven, o sistema saiba onde procurar o arquivo de execução.
+
+Para isso, criar a variávei de ambiente <strong> M3_HOME </strong>.
