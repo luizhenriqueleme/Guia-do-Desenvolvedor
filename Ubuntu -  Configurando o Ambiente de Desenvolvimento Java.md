@@ -12,9 +12,68 @@ sudo apt-get install oracle-java8-installer
 
 ## Instalando o Eclipse
 
-Faça o download do [Eclipse](https://www.eclipse.org), 
+Faça o download do [Eclipse](https://www.eclipse.org), pode ser a versão atual ou a que desejar. Neste exemplo, uso a versão <strong> Neon </strong>.
 
-pode ser a versão atual ou a que desejar. Neste exemplo, uso a versão <strong> Neon </strong> 
+Após fazer o download do Eclipse Neon, pelo <strong>Terminal</strong> acesse o diretório onde ele foi baixado, geralmente é a pasta 'Downloads'.
+
+1. Extraia o arquivo
+
+```shell
+$ tar -zxvf eclipse-jee-neon-2-linux-gtk-x86_64.tar.gz
+```
+
+2. Mova o conteúdo da pasta "eclipse" para <i>/usr/lib</i>
+
+```shell
+$ sudo mv eclipse /usr/lib
+```
+3. Crie o executável
+
+```shell
+$ sudo touch /usr/bin/eclipse
+```
+4. De permissão de execução
+
+```shell
+$ sudo chmod 755 /usr/bin/eclipse
+```
+
+5. Edite o executável
+
+```shell
+$ gksu gedit /usr/bin/eclipse
+```
+
+Na tela que abrir, cole o seguinte texto e salve o arquivo
+
+```shell
+#!/bin/sh
+export ECLIPSE_HOME="/usr/lib/eclipse/eclipse"
+```
+
+Criando o lançadordo <strong>Eclipse</strong>
+
+```shell
+$ gksu gedit /usr/share/applications/eclipse.desktop 
+```
+
+Copie e cole o seguinte código na tela que se abrir, e depois salve.
+
+```shell
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Eclipse
+Comment=Eclipse  IDE
+Exec=/usr/lib/eclipse/eclipse
+Icon=/usr/lib/eclipse/icon.xpm
+Terminal=false
+Type=Application
+Categories=GNOME;Application;Development;
+StartupNotify=true
+```
+
+Eclipse pronto para uso.
 
 
 ## Instalando o Maven
