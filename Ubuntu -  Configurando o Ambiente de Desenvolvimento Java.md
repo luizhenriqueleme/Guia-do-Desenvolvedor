@@ -12,6 +12,8 @@ sudo apt-get install oracle-java8-installer
 
 ## Instalando o Eclipse
 
+<p> Faça o download do [Eclipse](https://www.eclipse.org/), pode ser a versão atual ou a que desejar. Neste exemplo, uso a versão <strong> Neon </strong> </p>
+
 
 ## Instalando o Maven
 
